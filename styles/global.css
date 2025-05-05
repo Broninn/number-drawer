@@ -50,6 +50,8 @@
 
   /* Typography */
   --ff-sora: "Sora", system-ui, sans-serif;
+  --ff-roboto-mono: "Roboto Mono", system-ui, sans-serif;
+  --ff-roboto-flex: "Roboto Flex", system-ui, sans-serif;
   --fw-md: 500;
   --fw-bold: 700;
   --fw-extrabold: 800;
@@ -63,8 +65,14 @@
   --fs-4xl: 4.5rem; /* 72px */
 }
 
+
+
 body {
+  font-family: var(--ff-sora);
   background-color: var(--background-primary);
   color: var(--content-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-

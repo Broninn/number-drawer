@@ -7,18 +7,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sorteador de números</title>
     <link
-    href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap"
-    rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/index.css" />
   </head>
   <body>
-    <header>
-      <div class="container py-base">
-        <img src="assets/logo.svg" alt="">
-        <p>NUMBERS</p>
+    <div class="container">
+      <div class="left">
+        <div class="logo">
+          <img src="assets/logo.svg" alt="" />
+          <span>NUMBERS</span>
+        </div>
+        <div class="free">ONLINE - GRATUITO</div>
+        <h1>SORTEADOR<br />DE NÚMEROS</h1>
+
+        <div class="faq">
+          <div class="faq-item">
+            <img src="assets/icons/contact.svg" />
+            <div>
+              <h3>Como funciona o sorteador de números?</h3>
+              <p>
+                O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <img src="assets/icons/contact.svg" />
+            <div>
+              <h3>Posso escolher o intervalo dos números?</h3>
+              <p>
+                Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </header>
+
+      <div class="right">
+        <h2>QUERO SORTEAR:</h2>
+        <p>
+          defina o intervalo e a quantidade de números, clique em "Sortear" e
+          veja os resultados na tela. É rápido e fácil!
+        </p>
+
+        <form class="sort-form">
+          <div class="fields">
+            <div>
+              <label>NÚMEROS</label>
+              <input type="number" value="2" min="1" max="100" />
+            </div>
+            <div>
+              <label>DE</label>
+              <input type="number" value="1" min="1" />
+            </div>
+            <div>
+              <label>ATÉ</label>
+              <input type="number" value="100" min="1" />
+            </div>
+          </div>
+
+          <div class="checkbox-container">
+            <input type="checkbox" id="no-repeat" checked />
+            <label for="no-repeat">Não repetir número</label>
+          </div>
+
+          <button type="submit">SORTEAR →</button>
+        </form>
+      </div>
+    </div>
     <script defer src="scripts.js"></script>
   </body>
 </html>
