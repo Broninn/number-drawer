@@ -1,0 +1,21 @@
+header {
+  margin-top: 4.75rem;
+
+  & div {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    margin-inline: auto;
+
+    & img {
+      width: 2.375rem;
+      height: 2.375rem;
+    }
+    & p {
+      font-family: var(--ff-sora);
+      font-size: var(--fs-lg);
+      font-weight: var(--fw-extrabold);
+      line-height: 1.3;
+    }
+  }
+}

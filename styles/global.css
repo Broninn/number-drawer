@@ -54,11 +54,17 @@
   --fw-bold: 700;
   --fw-extrabold: 800;
 
-  --fs-xs: 0.75rem;   /* 12px */
-  --fs-sm: 0.875rem;  /* 14px */
-  --fs-md: 1rem;      /* 16px */
-  --fs-lg: 1.25rem;   /* 20px */
-  --fs-xl: 2rem;      /* 32px */
-  --fs-2xl: 2.5rem;   /* 40px */
-  --fs-4xl: 4.5rem;   /* 72px */
+  --fs-xs: 0.75rem; /* 12px */
+  --fs-sm: 0.875rem; /* 14px */
+  --fs-md: 1rem; /* 16px */
+  --fs-lg: 1.25rem; /* 20px */
+  --fs-xl: 2rem; /* 32px */
+  --fs-2xl: 2.5rem; /* 40px */
+  --fs-4xl: 4.5rem; /* 72px */
 }
+
+body {
+  background-color: var(--background-primary);
+  color: var(--content-primary);
+}
+
