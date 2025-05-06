@@ -44,7 +44,7 @@
         </div>
       </div>
 
-      <div class="right">
+      <!-- <div class="right" id="drawer">
         <h2>QUERO SORTEAR:</h2>
         <p>
           defina o intervalo e a quantidade de números, clique em "Sortear" e
@@ -55,15 +55,15 @@
           <div class="fields">
             <div>
               <label>NÚMEROS</label>
-              <input type="number" value="2" min="1" max="100" />
+              <input type="number" id="totalNumber" placeholder="2" min="1" max="100" />
             </div>
             <div>
               <label>DE</label>
-              <input type="number" value="1" min="1" />
+              <input type="number" id="fromNumber" placeholder="1" min="1" max="99" />
             </div>
             <div>
               <label>ATÉ</label>
-              <input type="number" value="100" min="1" />
+              <input type="number" id="toNumber" placeholder="100" min="1" max="100" />
             </div>
           </div>
 
@@ -74,6 +74,19 @@
 
           <button type="submit">SORTEAR →</button>
         </form>
+      </div> -->
+      <div class="right flex items-center justify-center flex-column" id="result">
+        <h2>RESULTADO DO SORTEIO</h2>
+        <h3>1º resultado</h3>
+        <div class="results">
+          <div class="result-container">
+            <div class="rotating-wrapper">
+              <div class="number-background"></div>
+            </div>
+            <div class="number-foreground">12</div>
+          </div>
+        </div>
+        <button type="back">SORTEAR NOVAMENTE <img src="assets/icons/play-again.svg" /></button>
       </div>
     </div>
     <script defer src="scripts.js"></script>
