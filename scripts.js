@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const min = parseInt(inputMinimo.value);
     const max = parseInt(inputMaximo.value);
 
+    const permitirRepeticao = !document.getElementById("no-repeat").checked;
+
     if (isNaN(quantidade) || isNaN(min) || isNaN(max)) {
       alert("Preencha todos os campos com números válidos.");
       return;
@@ -33,7 +35,12 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    const numeros = gerarNumerosSorteados(quantidade, min, max);
+    const numeros = gerarNumerosSorteados(
+      quantidade,
+      min,
+      max,
+      permitirRepeticao
+    );
 
     // Exibe os resultados
     drawer.style.display = "none";
@@ -73,17 +80,26 @@ document.addEventListener("DOMContentLoaded", () => {
     result.style.display = "none";
   });
 
-  function gerarNumerosSorteados(quantidade, min, max) {
-    const numerosDisponiveis = [];
-    for (let i = min; i <= max; i++) {
-      numerosDisponiveis.push(i);
+  function gerarNumerosSorteados(quantidade, min, max, permitirRepeticao) {
+    const sorteados = [];
+
+    if (permitirRepeticao) {
+      for (let i = 0; i < quantidade; i++) {
+        const numero = Math.floor(Math.random() * (max - min + 1)) + min;
+        sorteados.push(numero);
+      }
+    } else {
+      const numerosDisponiveis = [];
+      for (let i = min; i <= max; i++) {
+        numerosDisponiveis.push(i);
+      }
+
+      for (let i = 0; i < quantidade; i++) {
+        const index = Math.floor(Math.random() * numerosDisponiveis.length);
+        sorteados.push(numerosDisponiveis.splice(index, 1)[0]);
+      }
     }
 
-    const sorteados = [];
-    for (let i = 0; i < quantidade; i++) {
-      const index = Math.floor(Math.random() * numerosDisponiveis.length);
-      sorteados.push(numerosDisponiveis.splice(index, 1)[0]);
-    }
     return sorteados.sort((a, b) => a - b);
   }
 });
