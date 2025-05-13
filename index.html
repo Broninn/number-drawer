@@ -28,7 +28,8 @@
             <div>
               <h3>Como funciona o sorteador de números?</h3>
               <p>
-                O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.
+                O sorteador utiliza um algoritmo de geração aleatória para criar
+                números dentro do intervalo especificado pelo usuário.
               </p>
             </div>
           </div>
@@ -37,33 +38,52 @@
             <div>
               <h3>Posso escolher o intervalo dos números?</h3>
               <p>
-                Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.
+                Sim, você pode definir os valores mínimo e máximo para o
+                intervalo dos números sorteados.
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- <div class="right" id="drawer">
+      <div class="right" id="drawer">
         <h2>QUERO SORTEAR:</h2>
         <p>
           defina o intervalo e a quantidade de números, clique em "Sortear" e
           veja os resultados na tela. É rápido e fácil!
         </p>
 
-        <form class="sort-form">
+        <form class="sort-form" id="formularioSorteio">
           <div class="fields">
             <div>
               <label>NÚMEROS</label>
-              <input type="number" id="totalNumber" placeholder="2" min="1" max="100" />
+              <input
+                type="number"
+                id="totalNumber"
+                placeholder="2"
+                min="1"
+                max="6"
+              />
             </div>
             <div>
               <label>DE</label>
-              <input type="number" id="fromNumber" placeholder="1" min="1" max="99" />
+              <input
+                type="number"
+                id="fromNumber"
+                placeholder="1"
+                min="1"
+                max="99"
+              />
             </div>
             <div>
               <label>ATÉ</label>
-              <input type="number" id="toNumber" placeholder="100" min="1" max="100" />
+              <input
+                type="number"
+                id="toNumber"
+                placeholder="100"
+                min="1"
+                max="100"
+              />
             </div>
           </div>
 
@@ -72,21 +92,25 @@
             <label for="no-repeat">Não repetir número</label>
           </div>
 
-          <button type="submit">SORTEAR →</button>
+          <button type="submit" id="botaoSortear">SORTEAR →</button>
         </form>
-      </div> -->
-      <div class="right flex items-center justify-center flex-column" id="result">
+      </div>
+      <div
+        class="right flex items-center justify-center flex-column"
+        id="result"
+        style="display: none"
+      >
         <h2>RESULTADO DO SORTEIO</h2>
-        <h3>1º resultado</h3>
         <div class="results">
           <div class="result-container">
             <div class="rotating-wrapper">
               <div class="number-background"></div>
             </div>
-            <div class="number-foreground">12</div>
           </div>
         </div>
-        <button type="back">SORTEAR NOVAMENTE <img src="assets/icons/play-again.svg" /></button>
+        <button id="sortearNovamente">
+          SORTEAR NOVAMENTE <img src="assets/icons/play-again.svg" />
+        </button>
       </div>
     </div>
     <script defer src="scripts.js"></script>
